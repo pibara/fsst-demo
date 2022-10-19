@@ -5,7 +5,7 @@ To run this test with fsst run:
 fsst dockertest --linger
 ```
 
-The **flure__parts** dir contains a schema with three collections and a smart function bound to one of the collections:
+The **flure_parts** dir contains a schema with three collections and a smart function bound to one of the collections:
 
 * class : Classes a student can take
 * student: The students
