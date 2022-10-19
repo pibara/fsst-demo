@@ -1,0 +1,12 @@
+{
+    "transactions": [
+	    "delete_student",
+	    "delete_student/delete_enrolement",
+            "create_class",
+	    "create_student",
+	    "enrole_student"
+    ],
+    "queries": [
+	    "get_enrolements"
+    ]
+}

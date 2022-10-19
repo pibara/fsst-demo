@@ -1,0 +1,6 @@
+[{
+    "_id": "enrolement",
+    "enroled_class": ["class/name", "::class_name"],
+    "enroled_student": ["student/name", "::student_name"]
+}]
+

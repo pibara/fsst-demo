@@ -1,0 +1,54 @@
+[
+   [
+      {
+         "_id" : "_collection",
+         "name" : "class"
+      },
+      {
+         "_id" : "_collection",
+         "name" : "student"
+      },
+      {
+         "_id" : "_collection",
+	 "name" : "enrolement"
+      },
+      {
+         "name" : "class/name",
+         "_id" : "_predicate",
+         "unique" : true,
+         "type" : "string"
+      },
+      {
+         "name" : "student/name",
+         "_id" : "_predicate",
+         "unique" : true,
+         "type" : "string"
+      },
+      {
+         "name" : "enrolement/enroled_student",
+         "restrictCollection" : "student",
+         "type" : "ref",
+         "multi" : false,
+         "_id" : "_predicate"
+      },
+      {
+         "name" : "enrolement/enroled_class",
+         "restrictCollection" : "class",
+         "type" : "ref",
+         "multi" : false,
+         "_id" : "_predicate"
+      }
+   ],
+   [
+      {
+          "_id": ["_collection/name", "enrolement"],
+          "spec": ["_fn$hasStudent"],
+          "specDoc": "An enrolement is required to have a student."
+      },
+      {
+          "_id": "_fn$hasStudent",
+          "name": "enrolementHasStudent",
+          "code": "(boolean (get (?s) \"enrolement/enroled_student\"))"
+      }
+   ]
+]

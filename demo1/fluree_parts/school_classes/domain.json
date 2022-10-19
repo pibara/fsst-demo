@@ -1,0 +1,17 @@
+[
+  {
+      "doc": "Tests for handling class enrolements",
+      "auth": "$auth00",
+      "user": "test_user",
+      "auth_roles": ["root"],
+      "api_role": "root",
+      "test": "test_enrolements",
+      "scenarios": true,
+      "should_succeed": true,
+      "should_succeed_exceptions":  [],
+      "warn_only": false,
+      "warn_only_exceptions": [],
+      "skip": [],
+      "minimal_coverage": 0.0
+  }
+]

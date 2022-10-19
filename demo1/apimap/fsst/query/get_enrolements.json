@@ -1,0 +1,12 @@
+{
+  "select": [
+     "?enrolement",
+     "?classname"
+  ],
+  "where": [
+      ["?student", "student/name", "::student_name"],
+      ["?enrolement", "enrolement/enroled_student", "?student"],
+      ["?enrolement", "enrolement/enroled_class", "?class"],
+      ["?class", "class/name", "?classname"]
+  ]
+}
