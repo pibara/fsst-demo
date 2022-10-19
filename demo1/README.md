@@ -25,3 +25,26 @@ The test scenario is ass follows:
 * A transaction for deleting Alice and her enrolements is created and executed, this should succeed.
 
 At the time of writing, the first transaction doesn't fail, leaving a Spanish class enrolement without a student ref when Alice has been deleted.
+
+# Usefull queries
+
+```json
+{
+  "select": [
+    "*",
+    {"enroled_class": ["*"]},
+    {"enroled_student": ["*"]}
+  ],
+  "from": "enrolement"
+}
+```
+
+```json
+{
+  "select": [
+    "*",
+    {"spec": ["*"]}
+  ],
+  "from": "_collection"
+}
+```
