@@ -1,0 +1,48 @@
+[
+  [
+    {
+         "doc" : "Check if _user has a given role. Returns 0 or 1.",
+         "name" : "userHasRole01",
+         "code_from_query" : {
+            "where" : [
+               [
+                  "?user",
+		  "_user/username",
+                  "PARAM"
+               ],
+               [
+                  "?user",
+                  "_user/roles",
+                  "?role"
+               ],
+               [
+                  "?role",
+                  "_role/id",
+                  "PARAM"
+               ]
+            ],
+            "select" : [
+               "(count ?role)"
+            ]
+         },
+         "_id" : "_fn$userhasrole01",
+         "params" : [
+            "myUser",
+            "myRole"
+         ]
+      }
+  ],
+  [
+      {
+	 "_id": "_fn$hasNoConflictingPowers",
+	 "name": "hasNoConflictingPowers",
+	 "doc": "Check is a user doesn't have conflicted powers", 
+         "code_expand": "hasNoConflictingPowers.clj"
+      },
+      {
+          "_id": ["_predicate/name", "_user/roles"],
+          "spec": ["_fn$hasNoConflictingPowers"],
+          "specDoc": "A user isn't allowed to have conflicting powers according to the trias politicas."
+      }
+  ]
+]

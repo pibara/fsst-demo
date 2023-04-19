@@ -1,0 +1,17 @@
+[
+  {
+      "doc": "Test the trias politica scenarios",
+      "auth": "$auth00",
+      "user": "test_trias_politica",
+      "auth_roles": ["root"],
+      "api_role": "root",
+      "test": "trias_politica",
+      "scenarios": true,
+      "should_succeed": true,
+      "should_succeed_exceptions":  [],
+      "warn_only": false,
+      "warn_only_exceptions": [],
+      "skip": [],
+      "minimal_coverage": 100.0
+  }
+]

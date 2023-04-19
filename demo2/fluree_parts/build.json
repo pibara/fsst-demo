@@ -1,0 +1,9 @@
+{ 
+    "default": [
+        "trias_politica"
+    ],
+    "repaired": [
+        "trias_politica",
+	"enforce_trias_politica"
+    ]
+}
