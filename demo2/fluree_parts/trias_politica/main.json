@@ -3,7 +3,10 @@
     {
        "_id": "_role",
        "id": "legislator",
-       "doc": "Legislator role"
+       "doc": "Legislator role",
+       "rules": [
+                ["_rule/id", "root"]
+        ]
     },
     {     
        "_id": "_role",
