@@ -2,7 +2,7 @@
   [
     {
          "doc" : "Check if _user has a given role. Returns 0 or 1.",
-         "name" : "userHasRole01",
+         "name" : "userHasRole",
          "code_from_query" : {
             "where" : [
                [
