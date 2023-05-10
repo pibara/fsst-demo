@@ -1,0 +1,12 @@
+[{
+    "_id": [
+        "_user/username",
+        "::person"
+    ],
+    "roles": [
+        [
+            "_role/id",
+            "::power"
+        ]    
+    ]
+}]

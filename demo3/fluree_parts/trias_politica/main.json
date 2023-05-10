@@ -1,0 +1,89 @@
+[
+  [
+    {
+       "_id": "_role",
+       "id": "legislator",
+       "doc": "Legislator role"
+    },
+    {     
+       "_id": "_role",
+       "id": "executive",
+       "doc": "Executive role",
+       "rules": [
+                ["_rule/id", "root"]
+        ]
+    },
+    {
+       "_id": "_role",
+       "id": "judicial",
+       "doc": "judicial role",
+       "rules": [
+                ["_rule/id", "root"]
+        ]
+    }
+  ],
+  [
+    {
+        "_id": "_user",
+	"username": "senator"
+    },
+    {
+        "_id": "_user",
+        "username": "minister"
+    },
+    {
+        "_id": "_user",
+        "username": "judge"
+    },
+    {
+        "_id": "_user",
+        "username": "baker"
+    },
+    {
+        "_id": "_user",
+        "username": "farmer"
+    },
+    {
+        "_id": "_user",
+        "username": "artist"
+    }
+  ],
+  [
+    {
+      "_id": [
+          "_user/username",
+          "senator"
+      ],
+      "roles": [
+        [
+           "_role/id",
+           "legislator"
+        ]    
+      ]
+    },
+    {
+      "_id": [
+          "_user/username",
+          "minister"
+      ],
+      "roles": [
+        [
+           "_role/id",
+           "executive"
+        ]
+      ]
+    },
+    {
+      "_id": [
+          "_user/username",
+          "judge"
+      ],
+      "roles": [
+        [
+           "_role/id",
+           "judicial"
+        ]
+      ]
+    }
+  ]
+]
