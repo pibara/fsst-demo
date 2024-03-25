@@ -7,7 +7,8 @@ class Hooks:
     def between():
         print("HOOK: between")
         print("Appending raft file with zeros")
-        with open("./data/group/0.raft", "ab") as raftfile:
+
+        with open("/var/lib/fluree/group/0.raft", "ab") as raftfile:
             raftfile.write(b"\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0")
 
     def after():
